@@ -4,7 +4,8 @@ class Post < ActiveRecord::Base
   before_validation :make_title_case 
   belongs_to :author
 
-  #put new code here
+
+
   def self.from_today
     where("created_at >=?", Time.zone.today.beginning_of_day)
   end
